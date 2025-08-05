@@ -26,9 +26,11 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t javinr/graphql-actions:0.0.2 .
+        docker build -t javinr/graphql-actions:latest .
     - name: Push docker image
       run: |
         docker push javinr/graphql-actions:0.0.2
+        docker push javinr/graphql-actions:latest
       
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
